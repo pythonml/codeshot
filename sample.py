@@ -1,11 +1,15 @@
-def func(x):
-    return x * x
+import math
+
+def is_prime(x):
+    for i in range(2, int(math.sqrt(x))):
+        if x % i == 0:
+            return False
+    return True
 
 if __name__ == "__main__":
-    print "a very very very very very very very very very ve"
-    result = func(10)
-    print(result)
-    print(result)
-    print(result)
-    print(result)
-    print(result)
+    num = 101
+    result = is_prime(num)
+    if result:
+        print("{} is a prime number".format(num))
+    else:
+        print("{} is not a prime number".format(num))

@@ -1,3 +1,4 @@
+import argparse
 import os
 import sys
 from selenium import webdriver
@@ -19,9 +20,9 @@ def get_height(content):
     max_height = len(lines)
     return max_height
 
-def to_png(html_filepath, code_width, code_height):
+def to_png(html_filepath, code_width, code_height, outfile):
     folder = os.path.dirname(__file__)
-    outpath = os.path.join(folder, "code.png")
+    outpath = os.path.join(folder, outfile)
     driver = webdriver.PhantomJS()
     driver.set_window_size(code_width+60, code_height)
     driver.get(html_filepath)
@@ -51,20 +52,27 @@ def make_html(style_css, code_html, code_width, code_height):
     return outpath
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: %s <code file>" % sys.argv[0])
-        sys.exit(1)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--infile", help="code file to be converted to image", dest="infile")
+    parser.add_argument("--outfile", help="output image filepath", dest="outfile")
+    args = parser.parse_args()
 
-    filepath = sys.argv[1]
+    if args.infile is None:
+        parser.error("--infile requires an argument")
+    if args.outfile is None:
+        parser.error("--outfile reuqires an argument")
+
+    filepath = args.infile
+    outfile = args.outfile
     with open(filepath) as f:
         content = f.read()
         width = get_width(content)
         height = get_height(content)
         code_width = width*9 + 30
-        code_height = height*15 + 30
+        code_height = height*20 + 50
         formatter = HtmlFormatter(nobackground=True, style="monokai")
         code_html = highlight(content, PythonLexer(), formatter)
         style_css = formatter.get_style_defs('.highlight')
         html_filepath = make_html(style_css, code_html, code_width, code_height)
-        to_png(html_filepath, code_width, code_height)
+        to_png(html_filepath, code_width, code_height, outfile)
 
