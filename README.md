@@ -39,6 +39,6 @@ $ pip install codeshot
 MIT ([here](https://github.com/pythonml/codeshot/blob/master/LICENSE)
 
 
-[version-badge]:   https://img.shields.io/pypi/v/img2html.svg?label=version
+[version-badge]:   https://img.shields.io/badge/version-0.1-brightgreen.svg
 [version-link]:    https://pypi.python.org/pypi/codeshot/
-[license-badge]:   https://img.shields.io/github/license/mashape/apistatus.svg
+[license-badge]:   https://img.shields.io/github/license/pythonml/codeshot.svg
