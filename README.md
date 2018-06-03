@@ -1,6 +1,6 @@
-# codeshot
+# codeshot https://img.shields.io/badge/version-0.1-brightgreen.svg
 
-Convert Python code to image  [![Version][version-badge]][version-link] ![MIT License][license-badge]
+Convert Python code to image
 
 
 `codeshot` 是一个将Python代码转换成图片的工具
