@@ -3,7 +3,7 @@
 Convert Python code to image  [![Version][version-badge]][version-link] ![MIT License][license-badge]
 
 
-`codeshot` 将Python代码转换成图片
+`codeshot` 是一个将Python代码转换成图片的工具
 
 
 ### 示例
@@ -40,5 +40,5 @@ MIT ([here](https://github.com/pythonml/codeshot/blob/master/LICENSE)
 
 
 [version-badge]:   https://img.shields.io/pypi/v/img2html.svg?label=version
-[version-link]:    https://pypi.python.org/pypi/img2html/
+[version-link]:    https://pypi.python.org/pypi/codeshot/
 [license-badge]:   https://img.shields.io/badge/license-WTFPL-007EC7.svg#
