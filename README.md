@@ -41,4 +41,4 @@ MIT ([here](https://github.com/pythonml/codeshot/blob/master/LICENSE)
 
 [version-badge]:   https://img.shields.io/pypi/v/img2html.svg?label=version
 [version-link]:    https://pypi.python.org/pypi/codeshot/
-[license-badge]:   https://img.shields.io/badge/license-WTFPL-007EC7.svg#
+[license-badge]:   https://img.shields.io/github/license/mashape/apistatus.svg
