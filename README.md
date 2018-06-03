@@ -1,4 +1,5 @@
-# codeshot https://img.shields.io/badge/version-0.1-brightgreen.svg
+# codeshot [![Version][version-badge]][version-link] ![MIT License][license-badge]
+
 
 Convert Python code to image
 
