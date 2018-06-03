@@ -9,7 +9,7 @@ Convert Python code to image
 ### 示例
 
 转换后的代码图片
-![](https://raw.githubusercontent.com/pythonml/codeshot/master/code.png)
+![](https://raw.githubusercontent.com/pythonml/codeshot/master/codeshot/code.png)
 
 ### 使用方式
 ---
