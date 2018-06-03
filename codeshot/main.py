@@ -23,7 +23,7 @@ def get_height(content):
 def to_png(html_filepath, code_width, code_height, outfile):
     folder = os.path.dirname(__file__)
     outpath = os.path.join(folder, outfile)
-    driver = webdriver.PhantomJS()
+    driver = webdriver.PhantomJS(service_log_path='/tmp/ghostdriver.log')
     driver.set_window_size(code_width+60, code_height)
     driver.get(html_filepath)
     driver.save_screenshot(outpath)
@@ -59,11 +59,9 @@ if __name__ == "__main__":
 
     if args.infile is None:
         parser.error("--infile requires an argument")
-    if args.outfile is None:
-        parser.error("--outfile reuqires an argument")
 
     filepath = args.infile
-    outfile = args.outfile
+    outfile = args.outfile if args.outfile is not None else "code.png"
     with open(filepath) as f:
         content = f.read()
         width = get_width(content)
