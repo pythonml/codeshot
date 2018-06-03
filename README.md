@@ -13,10 +13,9 @@ Convert Python code to image
 
 ![](https://raw.githubusercontent.com/pythonml/codeshot/master/codeshot/code.png)
 
-### 使用方式
----
 
-#### 命令行
+### 使用方式
+
 ```
 usage: codeshot [-h] [--infile INFILE] [--outfile OUTFILE]
 
@@ -28,7 +27,6 @@ optional arguments:
 
 
 ### 安装
----
 
 ```
 $ pip install codeshot
@@ -36,7 +34,6 @@ $ pip install codeshot
 
 
 ### License
----
 
 MIT ([here](https://github.com/pythonml/codeshot/blob/master/LICENSE)
 
