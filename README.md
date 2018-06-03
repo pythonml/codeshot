@@ -35,7 +35,7 @@ $ pip install codeshot
 
 ### License
 
-MIT ([here](https://github.com/pythonml/codeshot/blob/master/LICENSE)
+[MIT](https://github.com/pythonml/codeshot/blob/master/LICENSE)
 
 
 [version-badge]:   https://img.shields.io/badge/version-0.1-brightgreen.svg
